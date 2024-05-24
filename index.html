@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="game-canvas" width="400" height="400"></canvas>
+    <div id="game-speed-modal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="closeGameSpeedModal()" class="w3-button w3-display-topright">×</span>
+                <h2>Choose Game Speed</h2>
+                <button onclick="setGameSpeed('easy')" class="w3-button">Easy</button>
+                <button onclick="setGameSpeed('medium')" class="w3-button">Medium</button>
+                <button onclick="setGameSpeed('hard')" class="w3-button">Hard</button>
+            </div>
+        </div>
+    </div>
+    <div id="game-over-modal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('game-over-modal').style.display='none'" class="w3-button w3-display-topright">×</span>
+                <h2>Game Over</h2>
+                <p>Your score is <span id="final-score"></span></p>
+                <button onclick="restartGame()">Restart Game</button>
+                <button onclick="quitGame()">Quit Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
